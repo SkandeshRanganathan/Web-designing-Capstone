@@ -1,0 +1,57 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('forgotp.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+form{
+    border: 3px solid black;
+    border-radius: 15px;
+    padding: 50px;
+    font-family: cursive;
+    background-color: antiquewhite;
+    left:35%;
+    top:100%;
+    animation:slide forwards 2s;
+}
+.confirm1{
+    margin-left: 20px;
+    border: 2px solid black;
+}
+.new1{
+    border: 2px solid black;
+}
+.submit{
+    height: 50px;
+    width: 100px;
+    margin-top: 7%;
+    border: 3px solid black;
+    border-radius: 15px;
+    font-family: cursive;
+}
+.submit:hover{
+    transition: all 400ms ease-in;
+    transform: scale(1.3);
+}
+.confirm1:hover{
+    transition: all 400ms ease-in;
+    transform: scale(1.3);
+
+}
+.new1:hover{
+    transition: all 400ms ease-in;
+    transform: scale(1.3);
+}
+@keyframes slide {
+    0% {
+        top:100%;
+        opacity:0;
+    }
+    100% {
+        top:20%;
+        opacity:1;
+    }
+}

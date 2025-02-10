@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.gif" type="image/x-icon">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav-date-time"></div>
+    
+    <form action="#" onsubmit="return validateForm()">
+        <center>
+            <h3>AMRITA JOB REFERENCES</h3>
+        </center>
+        <center>
+            <label class="mail">Mail : </label>
+            <input type="text" required class="mail1" placeholder="S.....@gmail.com"><br><br>
+        </center>
+        <center>
+            <label class="pass">Password : </label>
+            <input type="password" required class="pass1" placeholder="*****"><br><br>
+        </center>
+        <center>
+            <label for="check" class="chechy">
+                <input type="checkbox" id="check">
+                Save login
+            </label>
+            <a href="forgotpass.html" class="fp">Forgot Password?</a><br>
+        </center>
+        <center>
+            <button type="submit" class="login">Login</button>
+        </center>
+        <br>
+        <center>
+            <p class="para">Don't have an account? <a class="Sign" href="newacc.html">Sign up</a></p>
+        </center>
+    </form>
+    
+    <script>
+        function validateForm() {
+            const email = document.querySelector('.mail1').value;
+            const password = document.querySelector('.pass1').value;
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long");
+                return false;
+            }
+
+            // Form is valid, redirect to frontpage.html
+            window.location.href = 'frontpage.html';
+            return false; // Prevent default form submission
+        }
+    </script>
+</body>
+</html>
